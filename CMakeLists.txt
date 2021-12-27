@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.0)
+
+set(CMAKE_CONFIGURATION_TYPES Release RelWithDebInfo CACHE STRING INTERNAL FORCE)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+project(testNeon)
+
+add_executable(FullRange TestFullRange2LimitedRange.cc)
+add_executable(UV12ToYUV420P TestYUV2NV12Neon.cc)
